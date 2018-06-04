@@ -1,0 +1,2 @@
+# slideshow
+Responsive AngularJS Slideshow
