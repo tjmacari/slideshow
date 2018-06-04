@@ -1,0 +1,33 @@
+{
+    "links": [
+        {
+            "label": "Canada",
+            "href": "/canada"
+        },
+        {
+            "label": "World",
+            "href": "/world"
+        },
+        {
+            "label": "U.S.",
+            "href": "/us"
+        },
+        {
+            "label": "Politics",
+            "href":"/politics"
+        },
+        {
+            "label": "Business",
+            "href":"/business"
+        },
+        {
+            "label": "Sports",
+            "href":"/sports"
+        },
+        {
+            "label": "Tech",
+            "href":"/tech"
+        }
+    ]
+}
+

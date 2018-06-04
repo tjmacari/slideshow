@@ -1,0 +1,36 @@
+<section id="slideshow">
+
+    <!-- Container for hero image and related caption -->
+    <header>
+
+        <!-- Hero image container -->
+        <img id="hero-img" ng-show="heroImg" ng-src="{{heroImg}}" ng-click="heroClick();" />
+
+        <!-- Caption related to hero image -->
+        <p ng-if="heroCaption">{{heroCaption}}</p>
+    </header>
+
+    <section>
+
+        <!-- Prev arrow, use font awesome vector for icon -->
+        <div class="arrow prev-arrow disabled" ng-click="scroll('prev');" ng-class="{'disabled': showPrevArrow != true}">
+            <i class="fa fa-chevron-circle-left"></i>
+        </div>
+
+        <!-- Next arrow -->
+        <div class="arrow next-arrow" ng-click="scroll('next');" ng-class="{'disabled': showNextArrow != true}">
+            <i class="fa fa-chevron-circle-right"></i>
+        </div>
+
+    </section>
+
+    <!-- Thumbnails container -->
+    <footer id="thumbs-container-parent">
+        <section id="thumbs-container">
+
+            <!-- Custom thumbnail directive -->
+            <thumbnail ng-repeat="slide in queue" ng-class="{'active': currIndex === $index}" ng-click="thumbClick();"></thumbnail>
+        </section>
+    </footer>
+
+</section>

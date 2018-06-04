@@ -1,0 +1,70 @@
+@import "../../../assets/css/variables.less";
+
+section#tech {
+
+  header {
+
+    h1.lesser-margin-bottom {
+      margin-bottom: 7px;
+    }
+
+    p.author-row {
+      margin: 0 0 1.75rem 0;
+      font-size: 14px;
+
+      span.date {
+        margin-left: 0.75rem;
+        color: @lightGray;
+      }
+    }
+  }
+
+  /* Ensure all text blocks have ample margin below */
+  article {
+    margin-bottom: 2.75rem;
+  }
+
+  /* Slight 10px intentation for any element with this class */
+  .indent-sm {
+    margin-left: 1rem;
+  }
+
+  footer {
+    section#tech-gallery-container {
+      display: inline-block;
+      width: 55%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    section#notes {
+      display: inline-block;
+      width: 40%;
+      float: right;
+    }
+  }
+}
+
+/* If our screen gets to 700px or less: */
+@media screen and (max-width: @mediaQueryWidth) {
+
+  section#tech {
+
+    .indent-sm {
+      margin-left: 0;
+    }
+
+    footer {
+      section#tech-gallery-container {
+        display: block;
+        width: 100%;
+      }
+
+      section#notes {
+        display: block;
+        width: 100%;
+        float: left;
+      }
+    }
+  }
+}

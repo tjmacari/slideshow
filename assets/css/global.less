@@ -1,0 +1,74 @@
+/* Set all colors, sizes, etc. in a centrally-located stylesheet for easy customization */
+@import "variables.less";
+
+/* HTML5 fallback for older browsers */
+article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+body {
+
+    /*
+        As a best practice to keep angular components more modular,
+        Nav CSS located in nav.less and
+        Gallery CSS found in gallery.less
+    */
+
+    background-color: @bodyBgColor;
+    padding: @padding;
+    background-size: 100%;
+    font-family: @defaultFont;
+    font-size: @defaultFontSize;
+    color: @primaryColor;
+    min-width: @bodyMinWidth;
+    max-width: @bodyMaxWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* General anchor tag styles */
+    a {
+        text-decoration: none;
+        color: @medGray;
+        padding: 3px;
+        padding-right: 5px;
+        padding-left: 0;
+    }
+    a:hover {
+        color: @secondaryColor;
+    }
+    a.active {
+        border-bottom: 3px solid @secondaryColor;
+    }
+
+    /* Main body content */
+    main {
+
+        /* Anything in general inside main element */
+
+        /* General header text tag elements */
+        h1, h2 {
+            font-family: sans-serif;
+            font-size: @defaultFontSize * 2;
+            font-weight: normal;
+            margin: 0;
+            max-width: 70%;
+        }
+        h2 {
+            font-size: @defaultFontSize * 1.5;
+        }
+    }
+}
+
+/* If our screen gets to 700px or less: */
+@media screen and (max-width: @mediaQueryWidth) {
+
+    body {
+        main {
+
+            /* Make general headline elements 100% when screen is 700px or less */
+            h1, h2 {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "slides": [
+    {
+      "path": "assets/img/slides/img1.jpg",
+      "caption": "Take command of the Millineum Falcon!"
+    },
+    {
+      "path": "assets/img/slides/img2.jpg",
+      "caption": "Pilot A-Wings and other vehicles!"
+    },
+    {
+      "path": "assets/img/slides/img3.jpg",
+      "caption": "Many characters to choose from!"
+    },
+    {
+      "path": "assets/img/slides/img4.jpg",
+      "caption": "You are right in the middle of the battle!"
+    },
+    {
+      "path": "assets/img/slides/img5.jpg",
+      "caption": "Take out the empire in an X-Wing!"
+    }
+  ]
+}
+

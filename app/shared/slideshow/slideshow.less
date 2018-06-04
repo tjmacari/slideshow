@@ -1,0 +1,128 @@
+@import "../../../assets/css/variables.less";
+
+section#slideshow {
+
+  width: 100%;
+
+  header {
+
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #666;
+    }
+
+    /* Show a semi-transparent fat inner border on hover */
+    img:hover {
+      outline: 15px solid rgba(0, 255, 0, 0.5);
+      outline-offset: -15px;
+    }
+
+    p {
+      font-size: 14px;
+      min-height: 16px;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+    }
+
+  }
+
+  section {
+
+    position: relative;
+
+    /* Prev/Next arrows */
+    div.arrow {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      color: #aaa;
+
+      &.prev-arrow {
+        left: 0;
+      }
+
+      &.next-arrow {
+        right: 0;
+      }
+
+      &.disabled {
+        opacity: 0.2;
+        cursor: default;
+      }
+
+      i {
+        position: absolute;
+        top: 8px;
+        font-size: 30px;
+
+        &.fa-chevron-circle-left {
+          left: 0;
+        }
+
+        &.fa-chevron-circle-right {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  /* Footer will contain thumbnails */
+  footer#thumbs-container-parent {
+
+    /* Thumbnails will auto-scroll depending on mouse position */
+    overflow: hidden;
+    width: 80%;
+    height: 55px;
+    margin-left: 10%;
+
+    /* Place thumbs side by side horizontally */
+    section#thumbs-container {
+
+      width: auto;
+      vertical-align: top;
+      white-space: nowrap;
+
+      thumbnail {
+        width: 80px;
+        height: 45px;
+        background-size: 80px 45px;
+        display: inline-block;
+        background-color: #eee;
+        margin-right: 10px;
+        cursor: pointer;
+        outline: 1px solid #666;
+        outline-offset: -1px;
+        background-repeat: no-repeat;
+
+        /* If a thumbnail is active, show gold thin inner border */
+        &.active {
+          outline: 6px solid rgba(255, 178, 0, 0.5);
+          outline-offset: -6px;
+        }
+      }
+
+      /* remove margin-right for last child */
+      thumbnail:last-child {
+        margin-right: 0;
+      }
+
+      /* Show fat blue inner border on hover */
+      thumbnail:hover {
+        outline: 6px solid rgba(0, 255, 0, 0.5);
+        outline-offset: -6px;
+      }
+    }
+  }
+}
+
+
+
+/* If our screen gets to 700px or less: */
+@media screen and (max-width: @mediaQueryWidth) {
+}

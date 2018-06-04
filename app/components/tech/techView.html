@@ -1,0 +1,33 @@
+<!-- Keeping text json-driven since localization would likely be json-driven anyway -->
+<section id="tech">
+
+	<!-- Title, date, author, and intro paragraph -->
+	<header>
+		<h1 ng-class="{'lesser-margin-bottom': author && articleDate}">{{title}}</h1>
+		<p class="author-row" ng-if="author && articleDate"><span>{{author}}</span><span class="date">{{articleDate}}</span></p>
+	</header>
+
+	<!-- Body / intro paragraph -->
+	<section class="indent-sm" ng-if="paragraph.text" ng-repeat="paragraph in paragraphs">
+		<article>{{paragraph.text}}</article>
+	</section>
+
+	<!-- Gallery and side notes -->
+	<footer class="indent-sm">
+
+		<!-- Tech page slideshow of Battlefront images -->
+		<section id="tech-gallery-container">
+
+			<!-- slideshow directive -->
+			<slideshow url="assets/json/slides.json"></slideshow>
+		</section>
+
+		<!-- Side notes (ie. "Play As Icon Star Wars Characters", etc.) -->
+		<section id="notes">
+			<article class="paragraph" ng-repeat="paragraph in sideParagraphs">
+				<h2 ng-if="paragraph.header">{{paragraph.header}}</h2>
+				<p ng-if="paragraph.text">{{paragraph.text}}</p>
+			</article>
+		</section>
+	</footer>
+</section>

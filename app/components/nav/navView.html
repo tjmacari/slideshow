@@ -1,0 +1,5 @@
+<ul>
+	<li ng-repeat="link in links">
+		<a href="#{{link.href}}" ng-class="{'active': newPath === link.href}">{{link.label}}</a>
+	</li>
+</ul>
