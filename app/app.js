@@ -35,36 +35,16 @@ define([
                in future
             */
             $routeProvider
-                .when('/tech', {
+                .when('/foo', {
                     templateUrl: 'app/components/tech/techView.html',
                     controller: 'techCtrl'
                 })
-                .when('/canada', {
-                    templateUrl: 'app/components/comingsoon/comingsoonView.html',
-                    controller: 'comingsoonCtrl'
-                })
-                .when('/world', {
-                    templateUrl: 'app/components/comingsoon/comingsoonView.html',
-                    controller: 'comingsoonCtrl'
-                })
-                .when('/us', {
-                    templateUrl: 'app/components/comingsoon/comingsoonView.html',
-                    controller: 'comingsoonCtrl'
-                })
-                .when('/politics', {
-                    templateUrl: 'app/components/comingsoon/comingsoonView.html',
-                    controller: 'comingsoonCtrl'
-                })
-                .when('/business', {
-                    templateUrl: 'app/components/comingsoon/comingsoonView.html',
-                    controller: 'comingsoonCtrl'
-                })
-                .when('/sports', {
+                .when('/bar', {
                     templateUrl: 'app/components/comingsoon/comingsoonView.html',
                     controller: 'comingsoonCtrl'
                 })
                 .otherwise({
-                    redirectTo: '/tech'
+                    redirectTo: '/foo'
                 })
             ;
         }])

@@ -12,7 +12,7 @@ define([
     return angular.module('app.controllers')
 
         .controller('techCtrl', ['$scope', 'DataFactory', function($scope, DataFactory) {
-            DataFactory.loadItem('assets/json/tech.json').then(
+            DataFactory.loadItem('assets/json/page.json').then(
                 function(data) {
                     $scope.title = data.title;
                     $scope.author = data.author;
